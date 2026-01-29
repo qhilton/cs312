@@ -10,17 +10,17 @@ def main():
 
     # COMMENT AND UNCOMMENT appropriate lines as necessary
 
-    filename = "_primes_runtimes.json"
+    # filename = "_primes_runtimes.json"
     # filename = '_keypairs_runtimes.json'
     # filename = '_encryption_runtimes.json'
-    # filename = '_decryption_runtimes.json'
+    filename = '_decryption_runtimes.json'
 
     with open(filename, "r") as f:
         runtimes = json.load(f)
 
     def theoretical_big_o(n):
         # FILL THIS IN with your theoretical time complexity
-        return 1
+        return n**2
 
     coeffs = compute_coefficient(runtimes, theoretical_big_o)
 
